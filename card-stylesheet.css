@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Playfair+Display&display=swap');
+
+html {
+    background-color: #f7ede2;
+}
+h1, h2, h3, p {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+.card-holder {
+    display: inline-block;
+    width: 100%;        /* important */
+}
+.card {
+    height: 450px;
+    width: 22%;
+
+    float: left;
+    background-color:burlywood;
+    margin-left: 2%;
+    overflow-y: scroll;
+    
+    /* card shadow */
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+    /* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
+    border-radius: 50% 20% / 10% 40%;
+
+    /* scrollbar setting for firefox */
+    /* ----------------------------------- */
+    scrollbar-width: thin;
+    scrollbar-color: blue-orange;
+    /* ----------------------------------- */
+}
+
+/* scrollbar setting for edge, chrome, safari */
+/* ---------------------------------------------------------------------------------------------------------- */
+.card::-webkit-scrollbar {
+    width:10px;                                             /* width of the entire scrollbar  */
+}
+.card::-webkit-scrollbar-track {
+    background-color: orange;               /* color of the tracking area */
+    /* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
+    border-radius: 50% 20% / 10% 40%;
+}
+.card::-webkit-scrollbar-thumb {
+    background-color: blue;                             /* color of the scroll thumb */
+    border-radius: 20px;                                  /* roundness of the scroll thumb */
+    border: 3px solid orange;                           /* creates padding around the scroll thumb  */
+    /* (first radius values) / top-left-and-bottom-right | top-right-and-bottom-left */
+    border-radius: 50% 20% / 10% 40%;
+}
+/* ---------------------------------------------------------------------------------------------------------- */
+.card p {                       /* triggers all the paragraphs in card class */
+    margin: 2%;
+    text-align: center;
+    word-wrap: break-word;
+    font-family: 'Playfair Display', serif;
+}
+.card > img {
+    height: 180px;
+    width: 100%;
+    /* making image as sticky at top */
+    top: 0;                             /* important for position sticky to work */
+    position:-webkit-sticky;
+    position: sticky;
+}
+#card1 {
+    background-color:#b7d2f1;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 12px 12px 2px 1px rgb(0 0 255 / 20%);
+}
+#card2 {
+    background-color:#a9c0b3;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 12px 12px 2px 1px rgb(138 177 182);
+}
+#card3 {
+    background-color:#e6d2bf;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 12px 12px 2px 1px rgb(222 186 144);
+}
+#card4 {
+    background-color:#c4cede;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 12px 12px 2px 1px rgb(189 184 200);
+}
